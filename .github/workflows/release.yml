@@ -41,7 +41,7 @@ jobs:
           fi
           echo "version=${VERSION}" | tee -a $GITHUB_OUTPUT
           echo "filename=${VERSION}-${{  matrix.GOOS  }}-${{  matrix.GOARCH  }}${{  matrix.GOOS == 'windows' && '.exe'  }}" | tee -a $GITHUB_OUTPUT
-          echo "outfile=./build/dist/binary/${VERSION}-${{  matrix.GOOS  }}-${{  matrix.GOARCH  }}${{  matrix.GOOS == 'windows' && '.exe'  }}" | tee -a $GITHUB_OUTPUT
+          echo "outfile=./build/dist/binary/${VERSION}-${{  matrix.GOOS  }}-${{  matrix.GOARCH  }}${{  matrix.GOOS == 'windows' && '.exe' || null }}" | tee -a $GITHUB_OUTPUT
             # example: libgen-opds_v1.0-linux-arm64
             # example: libgen-opds_v1.0-windows-amd64.exe
             # example: libgen-opds_master_2024-07-15-linux-arm64
