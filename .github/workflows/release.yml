@@ -39,7 +39,7 @@ jobs:
             VERSION="${{  github.ref_name  }}_$(date -I)"
             # example: master_2024-07-15
           fi
-          FILENAME="${{  github.ref_name  }}-${{  matrix.GOOS  }}-${{  matrix.GOARCH  }}${{  matrix.GOOS == 'windows' && '.exe' || null  }}"
+          FILENAME="libgen-opds_${{  matrix.GOOS  }}-${{  matrix.GOARCH  }}${{  matrix.GOOS == 'windows' && '.exe' || null  }}"
           OUTFILE="./build/dist/binary/${FILENAME}"
           echo "version=${VERSION}" | tee -a $GITHUB_OUTPUT
           echo "filename=${FILENAME}" | tee -a $GITHUB_OUTPUT
