@@ -129,9 +129,9 @@ func (api *API) DownloadHandler(w http.ResponseWriter, r *http.Request) {
 	// Derive Info URL
 	var infoURL string
 	if downloadType == "fiction" {
-		infoURL = "http://library.lol/fiction/" + id
+		infoURL = "http://library.gift/fiction/" + id
 	} else if downloadType == "non-fiction" {
-		infoURL = "http://library.lol/main/" + id
+		infoURL = "http://library.gift/main/" + id
 	}
 
 	// Parse & Derive Download URL
